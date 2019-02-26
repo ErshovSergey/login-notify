@@ -1,4 +1,5 @@
 !/bin/bash
+# /usr/bin/login-notify
 PATH=/bin:/usr/bin
 
 token='токен бота телеграм'
