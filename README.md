@@ -4,6 +4,13 @@
 token - это токен вашего бота, как создать бота  
 chat - это ID получателя  
 
+Для запуска скрипта поместите строку 
+```
+session optional pam_exec.so /usr/bin/login-notify
+```
+в конец файл */etc/pam.d/sshd*
+
+
 ### Как узнать токен вашего бота
 Можно [создать бота](http://bernaerts.dyndns.org/linux/75-debian/351-debian-send-telegram-notification#create_your_telegram_bot)
 ```
