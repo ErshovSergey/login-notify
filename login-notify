@@ -5,9 +5,11 @@ PATH=/bin:/usr/bin
 token='токен бота телеграм'
 chat=ваш id
 
-subj="$PAM_TYPE  on  ${HOSTNAME} from ${PAM_USER}"
-message="Service: $PAM_SERVICE. Login {$PAM_USER} from ${PAM_RHOST} - `date`"
+hostname=`hostname -f`
+subj="{$PAM_TYPE} on {${hostname}} from {${PAM_USER}}"
+message="\nService: {${PAM_SERVICE}}.\n Login {$PAM_USER}\n from {${PAM_RHOST}}\n Date: `date`"
 
 /usr/bin/curl -s --header 'Content-Type: application/json' \
   --request 'POST' --data "{\"chat_id\":\"${chat}\",\"text\":\"${subj}\n${message}\"}" \
   "https://api.telegram.org/bot${token}/sendMessage"
+  
