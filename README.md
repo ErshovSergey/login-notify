@@ -57,6 +57,6 @@ You can see here that your user ID is 11223344.
 This is the client ID that Telegram Bot should use to send me a message.
 ```
 
-Ссылки:
-[Другие варианты отправки сообщений](http://bernaerts.dyndns.org/linux/75-debian/351-debian-send-telegram-notification)
-[Login notifications, pam_exec scripting](https://blog.stalkr.net/2010/11/login-notifications-pamexec-scripting.html)
+#### Ссылки:
+[Другие варианты отправки сообщений](http://bernaerts.dyndns.org/linux/75-debian/351-debian-send-telegram-notification)  
+[Login notifications, pam_exec scripting](https://blog.stalkr.net/2010/11/login-notifications-pamexec-scripting.html)  
