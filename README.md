@@ -8,8 +8,10 @@ chat - это ID получателя
 ```
 session optional pam_exec.so /usr/bin/login-notify
 ```
-в конец файл */etc/pam.d/sshd*
+в конец файл */etc/pam.d/common-session*
+Уведомления будут приходить от сервисов SSH but also su, login, sudo и др. использующих PAM авторизацию
 
+Для корректной работы необходим установленный пакет *dnsutils* (содержит dig).
 
 ### Как узнать токен вашего бота
 Можно [создать бота](http://bernaerts.dyndns.org/linux/75-debian/351-debian-send-telegram-notification#create_your_telegram_bot)
@@ -55,4 +57,6 @@ You can see here that your user ID is 11223344.
 This is the client ID that Telegram Bot should use to send me a message.
 ```
 
+Ссылки:
 [Другие варианты отправки сообщений](http://bernaerts.dyndns.org/linux/75-debian/351-debian-send-telegram-notification)
+[Login notifications, pam_exec scripting](https://blog.stalkr.net/2010/11/login-notifications-pamexec-scripting.html)
