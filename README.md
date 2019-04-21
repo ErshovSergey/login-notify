@@ -8,10 +8,11 @@
 ## Использование  
 ### Debian
 Поместите строку 
-```
-session optional pam_exec.so /usr/bin/login-notify
-```
+*session optional pam_exec.so /usr/bin/login-notify*
 в конец файл */etc/pam.d/common-session*
+```
+echo "session optional pam_exec.so /usr/bin/login-notify" >> /etc/pam.d/common-session
+```
 
 Для корректной работы необходим установленный пакет *dnsutils* (содержит dig).  
 
