@@ -9,6 +9,6 @@ hostname=`hostname -f`
 subj="{$PAM_TYPE} on {${hostname}}, login {${PAM_USER}}"
 message="\nService: {${PAM_SERVICE}}.\n Login {$PAM_USER}\n from {${PAM_RHOST}}{${hostname_from}}\n Date: {`date`}"
 
-/usr/bin/curl -s --header 'Content-Type: application/json' \
+/usr/bin/curl --insecure -s --header 'Content-Type: application/json' \
   --request 'POST' --data "{\"chat_id\":\"${chat}\",\"text\":\"${subj}\n${message}\"}" \
   "https://api.telegram.org/bot${token}/sendMessage"
