@@ -11,4 +11,4 @@ message="\nService: {${PAM_SERVICE}}.\n Login {$PAM_USER}\n from {${PAM_RHOST}}{
 
 /usr/bin/curl --insecure -s --header 'Content-Type: application/json' \
   --request 'POST' --data "{\"chat_id\":\"${chat}\",\"text\":\"${subj}\n${message}\"}" \
-  "https://api.telegram.org/bot${token}/sendMessage"
+  "https://api.telegram.org/bot${token}/sendMessage" &
